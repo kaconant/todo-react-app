@@ -1,0 +1,56 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.completed {
+  background: #e0fbe0;
+  text-decoration: line-through;
+}
+
+.text {
+  font-size: 16px;
+  color: #333;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 8px;
+}
+
+.toggle {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.toggle:hover {
+  opacity: 0.8;
+}
+
+.delete {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.delete:hover {
+  opacity: 0.8;
+}
