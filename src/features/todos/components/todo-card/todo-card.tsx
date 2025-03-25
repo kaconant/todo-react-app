@@ -20,7 +20,9 @@ const ToDoCard: React.FC<ToDoCardProps> = ({
       className={`${styles.card} ${completed ? styles.completed : ""}`}
       role="listitem"
     >
-      <p className={styles.text}>{text}</p>
+      <p className={`${styles.text} ${completed ? styles.completed : ""}`}>
+        {text}
+      </p>
       <div className={styles.actions}>
         <button
           className={styles.toggle}
@@ -30,14 +32,14 @@ const ToDoCard: React.FC<ToDoCardProps> = ({
             completed ? "Mark task as incomplete" : "Mark task as complete"
           }
         >
-          {completed ? "Undo" : "Complete"}
+          {completed ? "Reopen" : "Complete"}
         </button>
         <button
           className={styles.delete}
           onClick={() => onDelete(id)}
           aria-label="Delete task"
         >
-          ❌
+          Remove
         </button>
       </div>
     </div>

@@ -1,7 +1,6 @@
 .card {
   display: grid;
-  grid-template-columns: 1fr auto auto;
-  align-items: center;
+  /* grid-template-columns: 1fr auto auto; */
   gap: 12px;
   background: white;
   padding: 16px;
@@ -13,12 +12,16 @@
 
 .completed {
   background: #e0fbe0;
-  text-decoration: line-through;
+
+  > p {
+    text-decoration: line-through;
+  }
 }
 
 .text {
   font-size: 16px;
   color: #333;
+  place-self: flex-start;
 }
 
 .actions {
@@ -35,6 +38,7 @@
   border-radius: 4px;
   cursor: pointer;
   transition: opacity 0.2s;
+  min-width: 80px;
 }
 
 .toggle:hover {
