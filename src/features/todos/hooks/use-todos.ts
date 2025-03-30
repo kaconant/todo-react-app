@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:5000/todos";
+const API_URL = "http://localhost:5001/todos";
 
 export interface Todo {
   id: string;
@@ -10,12 +10,26 @@ export interface Todo {
 
 export const useTodos = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
+  // Loading should always be true as fallback
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((data) => setTodos(data))
-      .catch((error) => console.error("Error fetching data: ", error));
+    const loadTodos = async () => {
+      setIsLoading(true);
+      try {
+        const results = await fetch(API_URL);
+        if (!results.json) {
+          throw new Error("Failed to fetch todos");
+        }
+        const data = await results.json();
+        setTodos(data);
+      } catch (error) {
+        console.error("Error fetching todos:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    loadTodos();
   }, []);
 
   const toggleTodo = async (id: string) => {
@@ -48,5 +62,5 @@ export const useTodos = () => {
     }
   };
 
-  return { todos, setTodos, toggleTodo, deleteTodo };
+  return { todos, setTodos, toggleTodo, deleteTodo, isLoading };
 };
