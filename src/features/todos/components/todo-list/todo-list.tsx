@@ -11,7 +11,8 @@ const ToDoList: React.FC = () => {
   const { todos, toggleTodo, deleteTodo, isLoading } = useTodos();
 
   if (isLoading) return <Notification text="Loading" />;
-  if (todos.length === 0) return <div>There are no todos</div>;
+  if (todos.length === 0)
+    return <Notification text="There are no todos"></Notification>;
 
   return (
     <ul className={styles.list}>

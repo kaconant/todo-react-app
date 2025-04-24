@@ -1,8 +1,10 @@
 # Krissy's Practice To-Do App
 
 ![To-Do App](https://img.shields.io/badge/React-18-blue?style=flat-square)
+![React](https://img.shields.io/badge/React-19.0-blue?style=flat-square)
 ![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue?style=flat-square)
 ![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-1.9-purple?style=flat-square)
+![Storybook](https://img.shields.io/badge/Storybook-7.x-orange?style=flat-square)
 ![CSS Modules](https://img.shields.io/badge/CSS%20Modules-%23E34F26-orange?style=flat-square)
 ![pnpm](https://img.shields.io/badge/PNPM-8.6-yellow?style=flat-square)
 
@@ -14,6 +16,7 @@ A modern, fast, and scalable To-Do application built with **React, TypeScript, R
 - 🎨 **CSS Modules for Styling** - Scoped styles for better maintainability.
 - ⚡ **Fast State Management with Redux Toolkit** - Efficient updates with slices and reducers.
 - 🔥 **TypeScript Support** - Type safety and enhanced developer experience.
+- 📘 **Storybook for Component Development** – Build, document, and visually test UI components in isolation.
 - 📦 **Package Management with pnpm** - Faster, more efficient dependency handling.
 
 ## 🛠 Tech Stack
