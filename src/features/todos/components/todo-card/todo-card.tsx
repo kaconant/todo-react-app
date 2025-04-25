@@ -2,17 +2,17 @@ import styles from "./todo-card.module.css";
 
 interface ToDoCardProps {
   id: string;
-  text: string;
+  title: string;
   completed: boolean;
-  onToggle: (id: string) => void;
+  onComplete: (id: string) => void;
   onDelete: (id: string) => void;
 }
 
 const ToDoCard: React.FC<ToDoCardProps> = ({
   id,
-  text,
+  title,
   completed,
-  onToggle,
+  onComplete,
   onDelete,
 }) => {
   return (
@@ -20,13 +20,13 @@ const ToDoCard: React.FC<ToDoCardProps> = ({
       className={`${styles.card} ${completed ? styles.completed : ""}`}
       role="listitem"
     >
-      <p className={`${styles.text} ${completed ? styles.completed : ""}`}>
-        {text}
+      <p className={`${styles.title} ${completed ? styles.completed : ""}`}>
+        {title}
       </p>
       <div className={styles.actions}>
         <button
           className={styles.toggle}
-          onClick={() => onToggle(id)}
+          onClick={() => onComplete(id)}
           aria-pressed={completed}
           aria-label={
             completed ? "Mark task as incomplete" : "Mark task as complete"
@@ -39,7 +39,7 @@ const ToDoCard: React.FC<ToDoCardProps> = ({
           onClick={() => onDelete(id)}
           aria-label="Delete task"
         >
-          Remove
+          Delete
         </button>
       </div>
     </div>

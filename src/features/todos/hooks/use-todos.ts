@@ -4,7 +4,7 @@ const API_URL = "http://localhost:5001/todos";
 
 export interface Todo {
   id: string;
-  text: string;
+  title: string;
   completed: boolean;
 }
 

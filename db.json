@@ -2,32 +2,32 @@
   "todos": [
     {
       "id": "0c6c7268-746b-46a4-bc2c-6a068f265afd",
-      "text": "Learn TypeScript",
+      "title": "Learn TypeScript",
       "completed": true
     },
     {
       "id": "26b897d2-14fe-412d-af2d-91e5c2ac7f61",
-      "text": "Build a React App",
+      "title": "Build a React App",
       "completed": true
     },
     {
       "id": "e46c256e-fcef-4eab-9536-008011368c8b",
-      "text": "Make custom button component",
+      "title": "Make custom button component",
       "completed": false
     },
     {
       "id": "5b4d62f0-0a82-486c-88f4-a131c4961de5",
-      "text": "Make todos editable",
+      "title": "Make todos editable",
       "completed": false
     },
     {
       "id": "8b94ceb2-9453-4673-a9b9-63944cbab429",
-      "text": "Style the app",
+      "title": "Style the app",
       "completed": false
     },
     {
       "id": "8b94ceb2-9453-4673-a9b9-6392894rhd29",
-      "text": "Add ability to add todos",
+      "title": "Add ability to add todos",
       "completed": false
     }
   ]

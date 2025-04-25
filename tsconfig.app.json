@@ -10,6 +10,7 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
@@ -25,7 +26,8 @@
     "baseUrl": "src",
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "types": ["node", "jsdom", "@testing-library/jest-dom"]
   },
-  "include": ["src"]
+  "include": ["vite.config.ts", "./src/**/**.*"]
 }

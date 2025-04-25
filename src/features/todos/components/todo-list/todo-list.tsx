@@ -20,7 +20,7 @@ const ToDoList: React.FC = () => {
         <ToDoCard
           key={todo.id}
           {...todo}
-          onToggle={toggleTodo}
+          onComplete={toggleTodo}
           onDelete={deleteTodo}
         />
       ))}
